@@ -1,0 +1,35 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "FullBillingAccess",
+      "Effect": "Allow",
+      "Action": [
+        "aws-portal:*Billing*",
+        "aws-portal:*Usage*",
+        "aws-portal:*PaymentMethods*",
+        "aws-portal:*Account*",
+        "ce:*",
+        "budgets:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ReadOnlyVisibility",
+      "Effect": "Allow",
+      "Action": [
+        "iam:Get*",
+        "iam:List*",
+        "ec2:Describe*",
+        "s3:List*",
+        "s3:Get*",
+        "rds:Describe*",
+        "logs:Describe*",
+        "logs:Get*",
+        "cloudwatch:Get*",
+        "cloudwatch:Describe*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

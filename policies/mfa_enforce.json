@@ -1,0 +1,19 @@
+{   
+    "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Sid": "DenyAllExceptListedIfNoMFA",
+              "Effect": "Deny",
+              "NotAction": [
+                "iam:*",
+                "sts:GetSessionToken"
+            ],
+              "Resource": "*",
+              "Condition": {
+                  "BoolIfExists": {
+                      "aws:MultiFactorAuthPresent": "false"
+                  }
+              }
+          }
+      ]
+}

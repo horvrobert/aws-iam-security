@@ -1,0 +1,66 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EC2FullManagement",
+      "Effect": "Allow",
+      "Action": "ec2:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "RDSManagement",
+      "Effect": "Allow",
+      "Action": [
+        "rds:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SSMFull",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:*",
+        "ec2messages:*",
+        "ssmmessages:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchFull",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:*",
+        "logs:*",
+        "events:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3ScopedBuckets",
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::startupco-app-bucket",
+        "arn:aws:s3:::startupco-app-bucket/*",
+        "arn:aws:s3:::startupco-logs-bucket",
+        "arn:aws:s3:::startupco-logs-bucket/*",
+        "arn:aws:s3:::startupco-backups-bucket",
+        "arn:aws:s3:::startupco-backups-bucket/*"
+      ]
+    },
+    {
+      "Sid": "DenyIAMAndBilling",
+      "Effect": "Deny",
+      "Action": [
+        "iam:*",
+        "organizations:*",
+        "account:*",
+        "billing:*",
+        "aws-portal:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
