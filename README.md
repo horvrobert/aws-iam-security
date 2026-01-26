@@ -40,10 +40,10 @@ IAM authorizes **AWS API actions**, not “service usage”.
 ## Architecture Diagrams (Before / After)
 
 ### Before (Insecure)
-![Before IAM](./diagrams/migration_before1.png)
+<img src="./diagrams/migration_before1.png" width="350">
 
 ### After (Terraform-managed IAM)
-![After IAM](./diagrams/migration_after1.png)
+<img src="./diagrams/migration_after1.png" width="350">
 
 ---
 
