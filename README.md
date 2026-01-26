@@ -82,10 +82,6 @@ Goal: data visibility without infrastructure changes.
 - RDS **metadata** read-only (Describe/List)
 - Note: “read-only database queries” are **not IAM**; that’s handled by DB users/roles.
 
-### Admins (optional)
-If you include an Admins group, define it explicitly as a **break-glass** or **limited membership** group and justify why it exists.  
-Otherwise, remove this concept from the README to avoid confusion.
-
 ---
 
 ## MFA Enforcement
@@ -96,8 +92,8 @@ IAM doesn’t provide a simple “require MFA” switch per user. This project e
 
 Policy: `policies/mfa_enforce.json`
 
-**Limitation (be honest):**
-MFA enforcement improves interactive access control, but it doesn’t magically fix:
+**Limitation:**
+MFA enforcement improves interactive access control, but does not address:
 - poor access key hygiene
 - compromised credentials already issued
 - non-IAM access paths (e.g., DB auth)
