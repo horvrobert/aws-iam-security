@@ -45,8 +45,6 @@ IAM authorizes **AWS API actions**, not “service usage”.
 ### After (Terraform-managed IAM)
 ![After IAM](./diagrams/migration_after1.png)
 
-> Tip: If you want the diagrams to communicate the *IAM truth* clearly, label the “authorization” box as **AWS API Authorization (Allow / Explicit Deny / Implicit Deny)**.
-
 ---
 
 ## IAM Design Principles
